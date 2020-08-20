@@ -1,7 +1,15 @@
 import React from "react";
+import superhero from "./superhero";
+import superherodex from "./superherodex";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Switch>
+      <Route exact path="/" component={superherodex} />
+      <Route path="/:id" component={superhero} />
+    </Switch>
+  );
 }
 
 export default App;
