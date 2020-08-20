@@ -1,11 +1,15 @@
 import React from "react";
 
-const superhero = () => {
+const Superhero = (props) => {
+  const { match } = props;
+  const { params } = match;
+  const { superheroId } = params;
+
   return (
     <div>
-      <p>This is the superhero page</p>
+      <p>{`This is the superhero page for superhero # ${superheroId}`}</p>
     </div>
   );
 };
 
-export default superhero;
+export default Superhero;
