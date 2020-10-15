@@ -1,6 +1,6 @@
 import React from "react";
-import Superhero from "./superhero";
-import Superherodex from "./superherodex";
+import Superhero from "./Components/superhero";
+import Superherodex from "./Components/superherodex";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
