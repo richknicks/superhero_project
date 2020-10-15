@@ -3,11 +3,12 @@ import Superhero from "./superhero";
 import axios from "axios";
 
 const SuperHerodex = () => {
+  const [pokemonData, setPokemonData] = useState();
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/`)
+      .get(`https://pokeapi.co/api/v2/pokemon`)
       .then((response) => {
-        console.log(response);
+        console.log(response.data.results);
       })
       .catch();
   }, []);
